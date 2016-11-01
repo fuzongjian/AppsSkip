@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="adH-96-0Re">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="abb-jV-oCX">
+            <objects>
+                <navigationController id="adH-96-0Re" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="IoX-Q2-0Wl">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="3Hc-Kj-6gG"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92t-Oy-dtM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-330" y="-463"/>
+        </scene>
+        <!--应用之间的相互跳转-first-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6p0-4H-w4l">
+                                <rect key="frame" x="20" y="64" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="4Ko-ot-MES"/>
+                                    <constraint firstAttribute="width" constant="560" id="J2n-6k-lSa"/>
+                                </constraints>
+                                <state key="normal" title="跳转到主界面"/>
+                                <connections>
+                                    <action selector="SkipMainController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AGz-N7-nWM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kKC-fq-fV0">
+                                <rect key="frame" x="20" y="104" width="560" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="tTh-z4-LV7"/>
+                                </constraints>
+                                <state key="normal" title="跳转到指定界面"/>
+                                <connections>
+                                    <action selector="SkipSomeController:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FjJ-xi-g4o"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="kKC-fq-fV0" firstAttribute="top" secondItem="6p0-4H-w4l" secondAttribute="bottom" id="KyS-wH-PED"/>
+                            <constraint firstItem="6p0-4H-w4l" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="Wrv-h0-SWU"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="kKC-fq-fV0" secondAttribute="trailing" id="XXU-jx-nhX"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="6p0-4H-w4l" secondAttribute="trailing" id="gBR-3P-3I8"/>
+                            <constraint firstItem="kKC-fq-fV0" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="ggY-6b-gv0"/>
+                            <constraint firstItem="6p0-4H-w4l" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="rqY-LF-Ngh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="应用之间的相互跳转---first" id="zk8-3x-MGA"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="181" y="-564"/>
+        </scene>
+    </scenes>
+</document>
